@@ -14,4 +14,4 @@ RUN rm -rf /tmp/verapdf*
 COPY . /verapdf_verifier
 WORKDIR /verapdf_verifier
 RUN bundle install --without development test
-CMD ruby verapdf_verifier.rb -p 80
+CMD ruby verapdf_verifier.rb -p 80 -s Puma -e production

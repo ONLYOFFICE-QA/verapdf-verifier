@@ -12,4 +12,5 @@ group :development do
   gem 'rubocop', require: false
 end
 
+gem 'puma'
 gem 'sinatra'
