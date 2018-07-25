@@ -9,4 +9,4 @@
 # Offense count: 1
 Style/MixinUsage:
   Exclude:
-    - 'verapdf_verifyer.rb'
+    - 'verapdf_verifier.rb'

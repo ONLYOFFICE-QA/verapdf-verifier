@@ -3,7 +3,7 @@ require 'rspec'
 
 ENV['RACK_ENV'] = 'test'
 
-require File.expand_path '../verapdf_verifyer.rb', __dir__
+require File.expand_path '../verapdf_verifier.rb', __dir__
 
 module RSpecMixin
   include Rack::Test::Methods
