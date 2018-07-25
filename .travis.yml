@@ -1,0 +1,20 @@
+language: ruby
+
+rvm:
+- ruby-head
+- 2.5.1
+- 2.4.4
+- 2.3.7
+- 2.2.10
+- 2.1.10
+
+before_install:
+  - sudo apt-get install -y default-jre unzip wget
+  - gem update --system
+  - wget http://software.verapdf.org/releases/1.12/verapdf-greenfield-1.12.1-installer.zip -O /tmp/verapdf-installer.zip
+  - unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
+  - java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar /tmp/verapdf-auto-install.xml
+install:
+  - bundle install --without development
+script:
+  - rspec
