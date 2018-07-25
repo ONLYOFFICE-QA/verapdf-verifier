@@ -11,10 +11,10 @@ rvm:
 before_install:
   - sudo apt-get install -y default-jre unzip wget
   - gem update --system
-  - wget http://software.verapdf.org/releases/1.12/verapdf-greenfield-1.12.1-installer.zip -O /tmp/verapdf-installer.zip
-  - unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
-  - java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar /tmp/verapdf-auto-install.xml
 install:
   - bundle install --without development
+  - wget http://software.verapdf.org/releases/1.12/verapdf-greenfield-1.12.1-installer.zip -O /tmp/verapdf-installer.zip
+  - unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
+  - java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar verapdf-auto-install.xml
 script:
   - rspec

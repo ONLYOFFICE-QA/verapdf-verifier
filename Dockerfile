@@ -11,3 +11,7 @@ RUN wget http://software.verapdf.org/releases/1.12/verapdf-greenfield-1.12.1-ins
 RUN unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
 RUN java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar /tmp/verapdf-auto-install.xml
 RUN rm -rf /tmp/verapdf*
+COPY . /verapdf_verifier
+WORKDIR /verapdf_verifier
+RUN bundle install --without development test
+CMD ruby verapdf_verifier.rb -p 80
