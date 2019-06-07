@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Methods to help
 module AppHelper
   # @param file [String] path to file
