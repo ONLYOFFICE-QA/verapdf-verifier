@@ -7,7 +7,7 @@ RUN apt-get -y update && \
 
 # Install verapdf
 ADD verapdf-auto-install.xml /tmp/verapdf-auto-install.xml
-RUN wget http://software.verapdf.org/releases/1.14/verapdf-greenfield-1.14.2-installer.zip -O /tmp/verapdf-installer.zip
+RUN wget http://software.verapdf.org/releases/1.14/verapdf-greenfield-1.14.8-installer.zip -O /tmp/verapdf-installer.zip
 RUN unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
 RUN java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar /tmp/verapdf-auto-install.xml
 RUN rm -rf /tmp/verapdf*
