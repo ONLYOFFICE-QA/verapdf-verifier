@@ -2,6 +2,10 @@
 
 ## unreleased (master)
 
+### New Features
+
+* Actualize `VeraPDF` to 1.14.8
+
 ### Fixes
 
 * Remove temp file after parsing immediately
