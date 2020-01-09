@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
-# Methods to help
-module AppHelper
+# Class for work with verapdf
+class Verapdf
+  def initialize
+    @exe = '/opt/verapdf/verapdf'
+  end
+
   # @param file [String] path to file
   # @return [String, JSON] result of parsing in verapdf
-  def get_verapdf_data(file)
-    data = `/opt/verapdf/verapdf #{file}`
+  def file_data(file)
+    data = `#{@exe} #{file}`
     FileUtils.rm(file)
     data
   end
