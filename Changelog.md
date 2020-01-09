@@ -6,6 +6,10 @@
 
 * Actualize `VeraPDF` to 1.14.8
 
+### Refactor
+
+* `Verapdf` is a class instead of helper
+
 ### Fixes
 
 * Remove temp file after parsing immediately
