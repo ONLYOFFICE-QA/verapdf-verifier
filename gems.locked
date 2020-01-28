@@ -52,6 +52,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-rspec (1.37.1)
+      rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
     ruby2_keywords (0.0.1)
     simplecov (0.17.1)
@@ -79,7 +81,8 @@ DEPENDENCIES
   rack-test
   rspec
   rubocop
+  rubocop-rspec
   sinatra
 
 BUNDLED WITH
-   1.16.2
+   2.1.2
