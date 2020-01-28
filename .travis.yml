@@ -1,11 +1,15 @@
 language: ruby
 
 rvm:
-- ruby-head
-- 2.6.3
-- 2.5.5
-- 2.4.6
-
+  - ruby-head
+  - 2.7
+  - 2.6
+  - 2.5
+  - 2.4
+  - 2.3
+matrix:
+  allow_failures:
+    - rvm: ruby-head
 before_install:
   - sudo apt-get install -y default-jre unzip wget
 install:
