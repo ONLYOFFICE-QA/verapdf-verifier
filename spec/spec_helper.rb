@@ -22,3 +22,14 @@ module RSpecMixin
 end
 
 RSpec.configure { |c| c.include RSpecMixin }
+
+shared_examples 'correct response' do
+  it 'last_response is ok' do
+    expect(target).to be_ok
+  end
+
+  it 'last_response.body without errors' do
+    xml = Nokogiri::XML(target.body)
+    expect(xml.errors).to be_empty
+  end
+end
