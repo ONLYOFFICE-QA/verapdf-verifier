@@ -3,7 +3,7 @@
 require 'spec_helper'
 require 'nokogiri'
 
-describe 'My Sinatra Application' do
+describe Verapdf do
   let(:target) { last_response }
 
   describe 'send not pdf file' do
