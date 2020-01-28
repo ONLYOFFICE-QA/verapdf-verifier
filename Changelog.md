@@ -6,6 +6,7 @@
 
 * Actualize `VeraPDF` to 1.14.8
 * Use ruby 2.7 as base of Dockerfile
+* Add default `rake` task for tests
 
 ### Refactor
 
