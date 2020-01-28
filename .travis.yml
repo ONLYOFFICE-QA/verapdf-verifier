@@ -13,6 +13,6 @@ matrix:
     - rvm: ruby-head
 install:
   - docker build --tag verapdf-verifier .
-  - docker run -d -p 80:80 verapdf-verifier
+  - docker run -d -p 80:80 --name verapdf-verifier verapdf-verifier
 script:
   - docker exec -it verapdf-verifier rspec
