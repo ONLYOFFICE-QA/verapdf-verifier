@@ -15,11 +15,3 @@ RSpec/DescribeClass:
 # Configuration parameters: AggregateFailuresByDefault.
 RSpec/MultipleExpectations:
   Max: 2
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: Strict, EnforcedStyle, AllowedExplicitMatchers.
-# SupportedStyles: inflected, explicit
-RSpec/PredicateMatcher:
-  Exclude:
-    - 'spec/verapdf_verifier_spec.rb'

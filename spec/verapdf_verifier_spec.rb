@@ -22,6 +22,6 @@ describe 'My Sinatra Application' do
     post '/payload', data: File.read('spec/files/simple_pdf.pdf')
     xml = Nokogiri::XML(last_response.body)
     file_name = xml.xpath('//name').first.text
-    expect(File.exist?(file_name)).to be_falsey
+    expect(File).not_to exist(file_name)
   end
 end
