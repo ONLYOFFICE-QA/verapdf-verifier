@@ -1,5 +1,6 @@
 language: ruby
-
+services:
+  - docker
 rvm:
   - ruby-head
   - 2.7
@@ -10,12 +11,8 @@ rvm:
 matrix:
   allow_failures:
     - rvm: ruby-head
-before_install:
-  - sudo apt-get install -y default-jre unzip wget
 install:
-  - bundle install --without development
-  - wget http://software.verapdf.org/releases/1.14/verapdf-greenfield-1.14.8-installer.zip -O /tmp/verapdf-installer.zip
-  - unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
-  - java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar verapdf-auto-install.xml
+  - docker build . -tag verapdf-verifier
+  - docker run -d -p 80:80 verapdf-verifier
 script:
   - rspec
