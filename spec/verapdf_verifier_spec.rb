@@ -4,18 +4,22 @@ require 'spec_helper'
 require 'nokogiri'
 
 describe 'My Sinatra Application' do
-  it 'send not pdf file correct return' do
-    post '/payload', data: File.read('spec/files/test_file.txt')
-    expect(last_response).to be_ok
-    xml = Nokogiri::XML(last_response.body)
-    expect(xml.errors).to be_empty
+  let(:target) { last_response }
+
+  describe 'send not pdf file' do
+    before do
+      post '/payload', data: File.read('spec/files/test_file.txt')
+    end
+
+    it_behaves_like 'correct response'
   end
 
-  it 'send pdf file content return correct data' do
-    post '/payload', data: File.read('spec/files/simple_pdf.pdf')
-    expect(last_response).to be_ok
-    xml = Nokogiri::XML(last_response.body)
-    expect(xml.errors).to be_empty
+  describe 'send pdf file' do
+    before do
+      post '/payload', data: File.read('spec/files/simple_pdf.pdf')
+    end
+
+    it_behaves_like 'correct response'
   end
 
   it 'check that temp file not exists after check' do
