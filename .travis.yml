@@ -15,4 +15,4 @@ install:
   - docker build --tag verapdf-verifier .
   - docker run -d -p 80:80 verapdf-verifier
 script:
-  - docker exec -it rspec verapdf-verifier
+  - docker exec -it verapdf-verifier rspec
