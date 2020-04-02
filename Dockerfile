@@ -12,6 +12,7 @@ RUN unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
 RUN java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar /tmp/verapdf-auto-install.xml
 RUN rm -rf /tmp/verapdf*
 
+RUN gem install bundler
 COPY . /verapdf_verifier
 WORKDIR /verapdf_verifier
 RUN bundle install --without development test
