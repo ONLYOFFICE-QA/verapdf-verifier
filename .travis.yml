@@ -12,6 +12,7 @@ matrix:
     - rvm: ruby-head
 before_install:
   - sudo apt-get install -y default-jre unzip wget
+  - gem install bundler
 install:
   - bundle install --without development
   - wget http://software.verapdf.org/releases/1.14/verapdf-greenfield-1.14.8-installer.zip -O /tmp/verapdf-installer.zip
