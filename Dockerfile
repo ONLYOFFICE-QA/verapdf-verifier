@@ -1,9 +1,10 @@
-FROM ruby:2.7
+FROM ruby:2.7-alpine
 
-RUN apt-get -y update && \
-    apt-get -y install default-jre-headless \
-                       unzip \
-                       wget
+RUN apk update && \
+    apk add build-base \
+            openjdk11-jre-headless \
+            unzip \
+            wget
 
 # Install verapdf
 ADD verapdf-auto-install.xml /tmp/verapdf-auto-install.xml
