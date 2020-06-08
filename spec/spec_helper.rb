@@ -14,8 +14,11 @@ ENV['RACK_ENV'] = 'test'
 
 require File.expand_path '../verapdf_verifier.rb', __dir__
 
+# Module to setup rack test in sinatra
 module RSpecMixin
   include Rack::Test::Methods
+
+  # @return [Sinatra::Application] this application
   def app
     Sinatra::Application
   end
