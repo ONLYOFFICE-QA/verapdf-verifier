@@ -75,6 +75,7 @@ GEM
     tilt (2.0.10)
     unicode-display_width (1.7.0)
     url (0.3.2)
+    yard (0.9.25)
 
 PLATFORMS
   ruby
@@ -90,6 +91,7 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   sinatra
+  yard
 
 BUNDLED WITH
    2.1.4

@@ -11,6 +11,7 @@
 * Use `alpine` as base image for service.
 * Use Github Actions instead of Travis-CI
 * Add `rake` test dependency
+* Add `yard` development dependency
 
 ### Refactor
 
