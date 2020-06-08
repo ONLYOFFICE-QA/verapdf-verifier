@@ -10,6 +10,7 @@
 * Update bundler in `gems.locked` to v2.0
 * Use `alpine` as base image for service.
 * Use Github Actions instead of Travis-CI
+* Add `rake` test dependency
 
 ### Refactor
 
