@@ -28,7 +28,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-    - uses: action/checkout@v2
+    - uses: actions/checkout@v2
     - name: Correct build Dockerfile
       run: docker build .
   code-style:
