@@ -32,6 +32,8 @@ jobs:
     - name: Correct build Dockerfile
       run: docker build .
   code-style:
+    runs-on: ubuntu-latest
+    steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby 2.7
       uses: ruby/setup-ruby@v1
