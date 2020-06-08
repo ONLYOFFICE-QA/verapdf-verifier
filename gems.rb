@@ -5,8 +5,8 @@ source 'https://rubygems.org'
 group :test do
   gem 'codecov', require: false
   gem 'nokogiri'
-  gem 'rake'
   gem 'rack-test'
+  gem 'rake'
   gem 'rspec'
 end
 
