@@ -8,7 +8,10 @@
 * Use ruby 2.7 as base of Dockerfile
 * Add default `rake` task for tests
 * Update bundler in `gems.locked` to v2.0
-* Use `alpine` as base image for service
+* Use `alpine` as base image for service.
+* Use Github Actions instead of Travis-CI
+* Add `rake` test dependency
+* Add `yard` development dependency
 
 ### Refactor
 

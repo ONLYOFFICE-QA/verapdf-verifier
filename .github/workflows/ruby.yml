@@ -1,0 +1,54 @@
+name: Ruby
+on: [push]
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [2.4, 2.5, 2.6, 2.7, head]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby ${{ matrix.ruby }}
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+    - name: Install Verapd
+      run: |
+        sudo apt-get -y install default-jre unzip wget
+        wget http://software.verapdf.org/releases/1.14/verapdf-greenfield-1.14.8-installer.zip -O /tmp/verapdf-installer.zip
+        unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
+        java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar verapdf-auto-install.xml
+    - name: Build and test with Rake
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake
+    - name: Check `simplecov` result coverage
+      run: cat coverage/.last_run.json | jq '.result.covered_percent' | grep -q '100'
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Correct build Dockerfile
+      run: docker build .
+  code-style:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby 2.7
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
+    - uses: actions/setup-node@v1
+    - name: Check markdown files using `markdownlint`
+      run: |
+        npm install -g markdownlint-cli
+        markdownlint *.md
+    - name: Install all dev gems
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+    - name: Check source files using `rubocop`
+      run: rubocop
+    - name: Check that code 100% documented
+      run: yardoc . | grep -q '100.00% documented'
