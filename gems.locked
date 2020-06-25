@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.1)
-    childprocess (3.0.0)
+    childprocess (4.0.0)
     codecov (0.1.17)
       json
       simplecov
@@ -17,8 +17,8 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    overcommit (0.53.0)
-      childprocess (>= 0.6.3, < 4)
+    overcommit (0.54.0)
+      childprocess (>= 0.6.3, < 5)
       iniparse (~> 1.4)
     parallel (1.19.2)
     parser (2.7.1.4)
