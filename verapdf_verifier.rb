@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'sinatra'
-require_relative 'lib/verapdf_verifier.rb'
+require_relative 'lib/verapdf_verifier'
 verapdf = Verapdf.new
 
 post '/payload' do
