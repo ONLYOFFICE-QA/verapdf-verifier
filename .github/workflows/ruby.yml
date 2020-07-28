@@ -14,7 +14,7 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
     - name: Install Verapd
       run: |
-		 sudo apt -y update
+        sudo apt -y update
         sudo apt-get -y install default-jre unzip wget
         wget http://software.verapdf.org/releases/1.14/verapdf-greenfield-1.14.8-installer.zip -O /tmp/verapdf-installer.zip
         unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
