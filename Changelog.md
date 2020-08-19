@@ -21,3 +21,7 @@
 
 * Remove temp file after parsing immediately
 * Decrease size of image by using headless java
+
+### Changes
+
+* Drop support of ruby 2.4 since it's EOLed
