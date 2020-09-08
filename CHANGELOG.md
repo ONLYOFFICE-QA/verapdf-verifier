@@ -2,6 +2,10 @@
 
 ## unreleased (master)
 
+### Fixes
+
+* Add `markdownlint` config with allowed MD024
+
 ### Changes
 
 * Change organization name in readme
