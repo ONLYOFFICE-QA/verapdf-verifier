@@ -26,3 +26,4 @@
 
 * Drop support of ruby 2.4 since it's EOLed
 * Allow failures on `ruby-head` in CI
+* CHANGELOG.md now all capital letters
