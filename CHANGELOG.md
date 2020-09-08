@@ -2,6 +2,14 @@
 
 ## unreleased (master)
 
+### Fixes
+
+* Add `markdownlint` config with allowed MD024
+
+### Changes
+
+* Change organization name in readme
+
 ## 1.0.0 (2020-09-08)
 
 ### New Features
