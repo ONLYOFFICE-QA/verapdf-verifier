@@ -2,6 +2,8 @@
 
 ## unreleased (master)
 
+## 1.0.0 (2020-09-08)
+
 ### New Features
 
 * Actualize `VeraPDF` to 1.14.8
