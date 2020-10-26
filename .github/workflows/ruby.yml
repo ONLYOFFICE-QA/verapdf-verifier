@@ -21,7 +21,7 @@ jobs:
       run: |
         sudo apt -y update
         sudo apt-get -y install default-jre unzip wget
-        wget http://software.verapdf.org/releases/1.14/verapdf-greenfield-1.14.8-installer.zip -O /tmp/verapdf-installer.zip
+        wget http://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip
         unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
         java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar verapdf-auto-install.xml
     - name: Build and test with Rake
