@@ -2,6 +2,10 @@
 
 ## unreleased (master)
 
+### New Features
+
+* Add support of `rubocop-performance` and `rubocop-rake`
+
 ### Fixes
 
 * Add `markdownlint` config with allowed MD024
