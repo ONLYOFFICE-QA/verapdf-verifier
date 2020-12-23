@@ -3,11 +3,11 @@
 source 'https://rubygems.org'
 
 group :test do
-  gem 'codecov', require: false
   gem 'nokogiri'
   gem 'rack-test'
   gem 'rake'
   gem 'rspec'
+  gem 'simplecov', require: false
 end
 
 group :development do
