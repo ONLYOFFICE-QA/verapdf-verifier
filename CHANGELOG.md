@@ -5,6 +5,7 @@
 ### New Features
 
 * Add support of `rubocop-performance` and `rubocop-rake`
+* Add `ruby-3.0` to CI
 
 ### Fixes
 
