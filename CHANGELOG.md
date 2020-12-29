@@ -7,6 +7,7 @@
 * Add support of `rubocop-performance` and `rubocop-rake`
 * Add `ruby-3.0` to CI
 * Add `rake check` task to check result of working service
+* Use `ruby:3.0.0-alpine` as Docker base image
 
 ### Fixes
 
