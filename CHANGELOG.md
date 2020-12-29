@@ -18,6 +18,7 @@
 * Change organization name in readme
 * Update `verapdf` from 1.14.8 to 1.16.1
 * Remove support of `codecov`
+* Optimize `Dockerfile` to have less layers
 
 ## 1.0.0 (2020-09-08)
 
