@@ -2,6 +2,10 @@
 
 ## unreleased (master)
 
+### New Features
+
+* Enable `branch` coverage in `simplecov` config (and check in CI)
+
 ## 1.1.0 (2020-12-29)
 
 ### New Features
