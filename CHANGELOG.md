@@ -5,6 +5,7 @@
 ### New Features
 
 * Enable `branch` coverage in `simplecov` config (and check in CI)
+* Add `GitHub Action` config to pushing image to Docker Hub
 
 ## 1.1.0 (2020-12-29)
 
