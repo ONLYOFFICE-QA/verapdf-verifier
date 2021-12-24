@@ -6,8 +6,6 @@ verapdf = Verapdf.new
 
 post '/payload' do
   tmp_file = Tempfile.new(['verapdf_tmp_file', '.pdf'])
-  File.open(tmp_file.path, 'wb') do |f|
-    f.write(params[:data])
-  end
+  File.binwrite(tmp_file.path, params[:data])
   verapdf.file_data(tmp_file.path)
 end

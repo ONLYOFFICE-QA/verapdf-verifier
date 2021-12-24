@@ -7,6 +7,10 @@
 * Enable `branch` coverage in `simplecov` config (and check in CI)
 * Add `GitHub Action` config to pushing image to Docker Hub
 
+### Changes
+
+* Fix minor rubocop issue after upgrade rubocop to `v1.24.0`
+
 ## 1.1.0 (2020-12-29)
 
 ### New Features
