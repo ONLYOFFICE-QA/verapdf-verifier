@@ -38,7 +38,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Correct build Dockerfile
-      run: docker build .
+      run: docker build . --tag verapdf-verifier
+    - name: Service can be run
+      run: |
+        docker run -d --name=verapdf-verifier verapdf-verifier
+        sleep 10
+        docker exec verapdf-verifier true
   code-style:
     runs-on: ubuntu-latest
     steps:

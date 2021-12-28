@@ -7,6 +7,7 @@
 * Enable `branch` coverage in `simplecov` config (and check in CI)
 * Add `GitHub Action` config to pushing image to Docker Hub
 * Add `ruby-3.1` in CI
+* Add check that container is alive in CI
 
 ### Changes
 
