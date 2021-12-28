@@ -39,7 +39,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Correct build Dockerfile
       run: docker build . --tag verapdf-verifier
-    name: Service can be run
+    - name: Service can be run
       run: |
         docker run -d --name=verapdf-verifier verapdf-verifier
         sleep 10
