@@ -8,7 +8,7 @@ RUN apk update && \
 
 # Install verapdf
 ADD verapdf-auto-install.xml /tmp/verapdf-auto-install.xml
-RUN wget http://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip && \
+RUN wget https://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip && \
     unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer && \
     java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar /tmp/verapdf-auto-install.xml && \
     rm -rf /tmp/verapdf*

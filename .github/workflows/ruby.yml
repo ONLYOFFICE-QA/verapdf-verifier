@@ -17,11 +17,11 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
-    - name: Install Verapd
+    - name: Install Verapdf
       run: |
         sudo apt -y update
         sudo apt-get -y install default-jre unzip wget
-        wget http://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip
+        wget https://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip
         unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
         java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar verapdf-auto-install.xml
     - name: Build and test with Rake
