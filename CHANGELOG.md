@@ -8,6 +8,7 @@
 * Add `GitHub Action` config to pushing image to Docker Hub
 * Add `ruby-3.1` in CI
 * Add check that container is alive in CI
+* Add `yamllint` check in CI
 
 ### Changes
 

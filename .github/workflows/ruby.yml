@@ -12,58 +12,51 @@ jobs:
           - ruby: head
             allow-failures: true
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby ${{ matrix.ruby }}
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-    - name: Install Verapdf
-      run: |
-        sudo apt -y update
-        sudo apt-get -y install default-jre unzip wget
-        wget https://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip
-        unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
-        java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar verapdf-auto-install.xml
-    - name: Build and test with Rake
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-        bundle exec rake
-    - name: Check `simplecov` line coverage
-      run: cat coverage/.last_run.json | jq '.result.line' | grep -q '100'
-    - name: Check `simplecov` branch coverage
-      run: cat coverage/.last_run.json | jq '.result.branch' | grep -q '100'
+      - uses: actions/checkout@v2
+      - name: Set up Ruby ${{ matrix.ruby }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+      - name: Install Verapdf
+        run: |
+          sudo apt -y update
+          sudo apt-get -y install default-jre unzip wget
+          wget https://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip
+          unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer
+          java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar verapdf-auto-install.xml
+      - name: Build and test with Rake
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+          bundle exec rake
+      - name: Check `simplecov` line coverage
+        run: cat coverage/.last_run.json | jq '.result.line' | grep -q '100'
+      - name: Check `simplecov` branch coverage
+        run: cat coverage/.last_run.json | jq '.result.branch' | grep -q '100'
   docker:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Correct build Dockerfile
-      run: docker build . --tag verapdf-verifier
-    - name: Service can be run
-      run: |
-        docker run -d --name=verapdf-verifier verapdf-verifier
-        sleep 10
-        docker exec verapdf-verifier true
+      - uses: actions/checkout@v2
+      - name: Correct build Dockerfile
+        run: docker build . --tag verapdf-verifier
+      - name: Service can be run
+        run: |
+          docker run -d --name=verapdf-verifier verapdf-verifier
+          sleep 10
+          docker exec verapdf-verifier true
   code-style:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby 3.1
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '16'
-    - name: Check markdown files using `markdownlint`
-      run: |
-        npm install -g markdownlint-cli
-        markdownlint *.md
-    - name: Install all dev gems
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
-    - name: Check source files using `rubocop`
-      run: rubocop
-    - name: Check that code 100% documented
-      run: yardoc . | grep -q '100.00% documented'
+      - uses: actions/checkout@v2
+      - name: Set up Ruby 3.1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+      - name: Install all dev gems
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+      - name: Check source files using `rubocop`
+        run: rubocop
+      - name: Check that code 100% documented
+        run: yardoc . | grep -q '100.00% documented'
