@@ -13,6 +13,7 @@
 
 * Fix minor rubocop issue after upgrade rubocop to `v1.24.0`
 * Remove `ruby-2.5` from CI since it's EOLed
+* Remove `codeclimate` config, since we don't use it any more
 
 ### Fixes
 
