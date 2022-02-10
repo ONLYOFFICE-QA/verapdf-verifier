@@ -14,6 +14,10 @@
 * Fix minor rubocop issue after upgrade rubocop to `v1.24.0`
 * Remove `ruby-2.5` from CI since it's EOLed
 
+### Fixes
+
+* Fix `nodejs` version in CI
+
 ## 1.1.0 (2020-12-29)
 
 ### New Features
