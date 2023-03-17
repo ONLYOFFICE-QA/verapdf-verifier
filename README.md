@@ -6,7 +6,7 @@ Web service to verify pdf files via verapdf
 
 ```bash
 VERAPDF_PORT=80
-docker run -d -p $VERAPDF_PORT:80 --name verapdf-verifier --restart=always onlyofficeqa/verapdf-verifier
+docker run -d -p $VERAPDF_PORT:80 --name verapdf-verifier --restart=always onlyoffice/verapdf-verifier
 ```
 
 ## How to check via ruby
