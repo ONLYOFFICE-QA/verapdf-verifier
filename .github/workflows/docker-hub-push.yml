@@ -17,6 +17,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: onlyofficeqa/verapdf-verifier:latest
+          tags: onlyoffice/verapdf-verifier:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
