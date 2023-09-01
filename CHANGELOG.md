@@ -6,7 +6,7 @@
 
 * Enable `branch` coverage in `simplecov` config (and check in CI)
 * Add `GitHub Action` config to pushing image to Docker Hub
-* Add `ruby-3.1` in CI
+* Add `ruby-3.1`, `ruby-3.2` in CI
 * Add check that container is alive in CI
 * Add `yamllint` check in CI
 * Check `dependabot` at 8AM Moscow
@@ -14,7 +14,7 @@
 ### Changes
 
 * Fix minor rubocop issue after upgrade rubocop to `v1.24.0`
-* Remove `ruby-2.5` from CI since it's EOLed
+* Remove `ruby-2.5`, `ruby-2.6`, `ruby-2.7` from CI since it's EOLed
 * Remove `codeclimate` config, since we don't use it any more
 
 ### Fixes
