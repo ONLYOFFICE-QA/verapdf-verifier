@@ -8,7 +8,7 @@ GEM
     iniparse (1.5.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
-    mini_portile2 (2.8.4)
+    mini_portile2 (2.8.5)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.9)
