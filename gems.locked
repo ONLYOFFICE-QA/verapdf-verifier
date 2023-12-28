@@ -12,7 +12,7 @@ GEM
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.7.0)
-    nokogiri (1.15.5)
+    nokogiri (1.16.0)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     overcommit (0.61.0)
