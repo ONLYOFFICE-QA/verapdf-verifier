@@ -17,7 +17,8 @@
 * Fix minor rubocop issue after upgrade rubocop to `v1.24.0`
 * Remove `ruby-2.5`, `ruby-2.6`, `ruby-2.7` from CI since it's EOLed
 * Remove `codeclimate` config, since we don't use it any more
-* Remove `ruby-3.0`, `ruby-3.1` and `ruby-3.2` from CI since we use `ruby-3.3` as base
+* Remove `ruby-3.0`, `ruby-3.1` and `ruby-3.2`
+  from CI since we use `ruby-3.3` as base
 
 ### Fixes
 
