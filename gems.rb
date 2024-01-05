@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+ruby '~> 3.3.0'
+
 group :test do
   gem 'nokogiri'
   gem 'rack-test'
