@@ -11,6 +11,7 @@
 * Add check that container is alive in CI
 * Add `yamllint` check in CI
 * Check `dependabot` at 8AM Moscow
+* Add `dependabot` check for `GitHub Actions`
 
 ### Changes
 
