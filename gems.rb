@@ -22,6 +22,5 @@ group :development do
 end
 
 gem 'puma'
+gem 'rackup', '~> 2.1'
 gem 'sinatra'
-
-gem "rackup", "~> 2.1"
