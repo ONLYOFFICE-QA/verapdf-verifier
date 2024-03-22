@@ -22,4 +22,5 @@ group :development do
 end
 
 gem 'puma'
+gem 'rackup'
 gem 'sinatra'

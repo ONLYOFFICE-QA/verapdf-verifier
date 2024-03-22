@@ -20,6 +20,7 @@
 * Remove `codeclimate` config, since we don't use it any more
 * Remove `ruby-3.0`, `ruby-3.1` and `ruby-3.2`
   from CI since we use `ruby-3.3` as base
+* Migrate app to `sinatra-4`
 
 ### Fixes
 
