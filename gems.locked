@@ -96,7 +96,7 @@ GEM
     tilt (2.4.0)
     unicode-display_width (2.5.0)
     webrick (1.8.1)
-    yard (0.9.36)
+    yard (0.9.37)
 
 PLATFORMS
   ruby
