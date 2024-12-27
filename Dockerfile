@@ -1,5 +1,7 @@
 FROM ruby:3.4.1-alpine
 
+ENV VERAPDF_URL=https://software.verapdf.org/dev/1.27/verapdf-greenfield-1.27.102-installer.zip
+
 RUN apk update && \
     apk add build-base \
             openjdk11-jre-headless \
@@ -8,7 +10,7 @@ RUN apk update && \
 
 # Install verapdf
 ADD verapdf-auto-install.xml /tmp/verapdf-auto-install.xml
-RUN wget https://software.verapdf.org/releases/1.16/verapdf-greenfield-1.16.1-installer.zip -O /tmp/verapdf-installer.zip && \
+RUN wget ${VERAPDF_URL} -O /tmp/verapdf-installer.zip && \
     unzip /tmp/verapdf-installer.zip -d /tmp/verapdf-installer && \
     java -jar /tmp/verapdf-installer/*/verapdf-izpack-installer-*.jar /tmp/verapdf-auto-install.xml && \
     rm -rf /tmp/verapdf*
