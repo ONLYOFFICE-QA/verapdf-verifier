@@ -4,7 +4,7 @@
 
 ### New Features
 
-* Use `ruby-3.3` as application base
+* Use `ruby-3.4` as application base
 * Enable `branch` coverage in `simplecov` config (and check in CI)
 * Add `GitHub Action` config to pushing image to Docker Hub
 * Add `ruby-3.1`, `ruby-3.2` in CI
