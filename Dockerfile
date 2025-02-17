@@ -1,4 +1,4 @@
-FROM ruby:3.4.1-alpine
+FROM ruby:3.4.2-alpine
 
 ENV VERAPDF_URL=https://software.verapdf.org/dev/1.27/verapdf-greenfield-1.27.102-installer.zip
 
