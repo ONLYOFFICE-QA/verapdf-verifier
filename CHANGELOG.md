@@ -26,6 +26,7 @@
 ### Fixes
 
 * Fix `nodejs` version in CI
+* Run `rubocop` in CI through `bundle exec`
 
 ## 1.1.0 (2020-12-29)
 
